@@ -298,7 +298,7 @@ Printer.prototype.watch = function() {
     var parsedData = parseStdout(data)
       .slice(2)
       .map(function(line) {
-        line = line.split(/[ ]{2,}/);
+        line = line.split(/[ ]{1,}/);
         return {
           rank: (line[0] === 'active' ? line[0] : parseInt(line[0].slice(0, -2))),
           owner: line[1],
