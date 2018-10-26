@@ -267,12 +267,12 @@ var parseStdout = function(data) {
 
 function Printer(name) {
   var self = this;
-  if (!Printer.match(name)) {
-    console.error(
-      name + ' printer does not exist ; installed printers are ' + Printer.list()
-      );
-    throw new Error('Printer ' + name + ' does not exist on your system.');
-  }
+  // if (!Printer.match(name)) {
+  //   console.error(
+  //     name + ' printer does not exist ; installed printers are ' + Printer.list()
+  //     );
+  //   throw new Error('Printer ' + name + ' does not exist on your system.');
+  // }
   self.name = name;
   self.jobs = [];
   self.watch();
